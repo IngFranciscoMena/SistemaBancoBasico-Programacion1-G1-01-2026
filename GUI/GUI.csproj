@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autenticacion\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticacion\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Autenticacion\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +90,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recursos\4847043.ico" />
+    <Content Include="Recursos\btn_clientes.png" />
+    <Content Include="Recursos\btn_cuentas.png" />
+    <Content Include="Recursos\fondo_menu.jpg" />
+    <Content Include="Recursos\inicio_sesion.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -91,6 +104,10 @@
       <Project>{33FE558F-0B6A-443A-A9D3-AD846A5FA7F6}</Project>
       <Name>EL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clientes\" />
+    <Folder Include="Cuentas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
