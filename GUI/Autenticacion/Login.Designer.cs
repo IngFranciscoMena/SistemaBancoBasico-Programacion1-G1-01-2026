@@ -77,6 +77,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(156, 22);
             this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtContraseña
             // 
@@ -84,6 +85,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(156, 22);
             this.txtContraseña.TabIndex = 4;
+            this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnIniciarSesion
             // 

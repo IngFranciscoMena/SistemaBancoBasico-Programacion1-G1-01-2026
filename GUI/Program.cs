@@ -18,8 +18,25 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // este método incializa el formulario a mostrar
-            Application.Run(new Login());
+            // pre-validación para iniciar nuestro sistema
+            // a través de nuestro Login
+
+            // crear una instancia (objeto) de nuestra clase Login
+
+            Login formLogin = new Login();
+
+            // guardar el valor devuelto
+            var respuesta = formLogin.ShowDialog();
+
+            if (respuesta == DialogResult.OK)
+            {
+                // este método incializa el formulario a mostrar
+                Application.Run(new Form1());
+            }
+            else 
+            {
+                Application.Exit();            
+            }
         }
     }
 }

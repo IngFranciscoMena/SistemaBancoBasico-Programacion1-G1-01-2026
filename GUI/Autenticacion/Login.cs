@@ -22,13 +22,22 @@ namespace GUI.Autenticacion
             // validar las credenciales
             if (txtUsuario.Text.Equals("admin") && txtContraseña.Text.Equals("admin"))
             {
-                // mostrar el menu principal
+                // vamos a agregar el valor DialogResult.Ok a la propiedad DialogResult del formulario Login
+                this.DialogResult = DialogResult.OK;
+                // cerrar el formulario
+                this.Close();
             }
             else
             {
                 // mostrar un mensaje de error
                 MessageBox.Show("Credenciales incorrectas.", "Banco Green | Inicio de Sesión",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // limpiar los txt y enfocar el txtUsuario
+                txtUsuario.Clear();
+                txtContraseña.Clear();
+
+                txtUsuario.Focus();
             }
         }
     }
