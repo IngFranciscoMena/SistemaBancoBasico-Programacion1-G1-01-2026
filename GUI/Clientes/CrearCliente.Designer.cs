@@ -157,7 +157,10 @@
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CrearCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banco Green | Formulario Nuevo Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();

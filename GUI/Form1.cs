@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.Clientes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace GUI
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            // Instanciar la clase ListadoClientes
+            ListadoClientes formClientes = new ListadoClientes();
+
+            // mostrar el formulario
+            formClientes.ShowDialog();
         }
     }
 }
