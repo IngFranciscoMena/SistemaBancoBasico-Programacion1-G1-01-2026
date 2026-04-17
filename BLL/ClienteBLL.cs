@@ -13,8 +13,15 @@ namespace BLL
         // instancia de nuestra clase ClienteDAL
         public ClienteDAL _clienteDAL;
 
+        public int Eliminar(int clienteId)
+        {
+            _clienteDAL = new ClienteDAL();
+
+            return _clienteDAL.Eliminar(clienteId);
+        }
+
         // crear un metodo para almacenar un cliente
-        public int Guardar(Cliente cliente)
+        public int Guardar(Cliente cliente, int id = 0, bool esEdicion = false)
         {
             // inicializar la instancia de ClienteDALADO
             _clienteDAL = new ClienteDAL();
@@ -25,7 +32,7 @@ namespace BLL
             // eliminar el caracter - en la propiedad documento
             cliente.Documento = cliente.Documento.Replace("-", "");
 
-            int resultado = _clienteDAL.Guardar(cliente);
+            int resultado = _clienteDAL.Guardar(cliente, id, esEdicion);
 
             return resultado;
         }

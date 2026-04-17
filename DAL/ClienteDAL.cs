@@ -54,12 +54,17 @@ namespace DAL
         }
 
         // metodo para eliminar un cliente
-        public int Eliminar(Cliente cliente)
+        public int Eliminar(int id)
         {
             int resultado = 0;
 
             // inicializar nuestro DbContext
             _db = new BancoDbContext();
+
+            Cliente cliente = _db.Clientes.Find(id);
+
+            if (cliente == null)
+                return resultado; // 404 not found
 
             _db.Clientes.Remove(cliente); // DELETE FROM Clientes Where Id = ?
             _db.SaveChanges();
