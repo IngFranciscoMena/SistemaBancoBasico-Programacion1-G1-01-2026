@@ -16,9 +16,14 @@ namespace BLL
         // crear un metodo para almacenar un cliente
         public int Guardar(Cliente cliente)
         {
-
             // inicializar la instancia de ClienteDALADO
             _clienteDAL = new ClienteDAL();
+
+            // inserción de fecharegistro
+            cliente.FechaRegistro = DateTime.Now;
+
+            // eliminar el caracter - en la propiedad documento
+            cliente.Documento = cliente.Documento.Replace("-", "");
 
             int resultado = _clienteDAL.Guardar(cliente);
 
